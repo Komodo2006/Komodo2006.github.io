@@ -9,13 +9,16 @@
   <meta name="description" content="题意概述 给你一个无向图（∣V∣,∣E∣≤105|V|,|E|\le10^5∣V∣,∣E∣≤105），边的权值为二元组(a,b)(a,b)(a,b)。 共Q≤105Q\le10^5Q≤105个询问，每次给定u,v,a,bu,v,a,bu,v,a,b,问是否存在一条路径（可以重复经过顶点），使得max⁡e∈Pathae&#x3D;a,max⁡e∈Pathbe&#x3D;b\max_{e\in Path}a_e&#x3D;a,\">
 <meta property="og:type" content="article">
 <meta property="og:title" content="题解#2048. 「HNOI2016」最小公倍数">
-<meta property="og:url" content="https://komodo.github.io/2021/04/10/2021-4-10LOJ#2048-zuixiaogongbeishu/index.html">
+<meta property="og:url" content="https://komodo.github.io/2021/04/10/2021-4-10LOJ%202048-zuixiaogongbeishu/index.html">
 <meta property="og:site_name" content="Komodo&#39;s Blog">
 <meta property="og:description" content="题意概述 给你一个无向图（∣V∣,∣E∣≤105|V|,|E|\le10^5∣V∣,∣E∣≤105），边的权值为二元组(a,b)(a,b)(a,b)。 共Q≤105Q\le10^5Q≤105个询问，每次给定u,v,a,bu,v,a,bu,v,a,b,问是否存在一条路径（可以重复经过顶点），使得max⁡e∈Pathae&#x3D;a,max⁡e∈Pathbe&#x3D;b\max_{e\in Path}a_e&#x3D;a,\">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-10T03:05:42.324Z">
-<meta property="article:modified_time" content="2021-04-24T03:24:56.071Z">
+<meta property="article:modified_time" content="2021-04-24T06:09:03.032Z">
 <meta property="article:author" content="Komodo">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="可持久化">
+<meta property="article:tag" content="并查集">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Komodo's Blog" type="application/atom+xml">
@@ -81,9 +84,9 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-2021-4-10LOJ#2048-zuixiaogongbeishu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-2021-4-10LOJ 2048-zuixiaogongbeishu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/04/10/2021-4-10LOJ#2048-zuixiaogongbeishu/" class="article-date">
+    <a href="/2021/04/10/2021-4-10LOJ%202048-zuixiaogongbeishu/" class="article-date">
   <time class="dt-published" datetime="2021-04-10T03:05:42.324Z" itemprop="datePublished">2021-04-10</time>
 </a>
     
@@ -125,10 +128,12 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://komodo.github.io/2021/04/10/2021-4-10LOJ#2048-zuixiaogongbeishu/" data-id="cknvaucqi0001cwv38c3675kv" data-title="题解#2048. 「HNOI2016」最小公倍数" class="article-share-link">Share</a>
+      <a data-url="https://komodo.github.io/2021/04/10/2021-4-10LOJ%202048-zuixiaogongbeishu/" data-id="cknvceemc0001tkv38tb53f14" data-title="题解#2048. 「HNOI2016」最小公倍数" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96/" rel="tag">可持久化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" rel="tag">并查集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
     </footer>
   </div>
   
@@ -155,9 +160,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96/" rel="tag">可持久化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" rel="tag">并查集</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96/" style="font-size: 10px;">可持久化</a> <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" style="font-size: 10px;">并查集</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -176,7 +195,7 @@
       <ul>
         
           <li>
-            <a href="/2021/04/10/2021-4-10LOJ#2048-zuixiaogongbeishu/">题解#2048. 「HNOI2016」最小公倍数</a>
+            <a href="/2021/04/10/2021-4-10LOJ%202048-zuixiaogongbeishu/">题解#2048. 「HNOI2016」最小公倍数</a>
           </li>
         
           <li>
